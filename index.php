@@ -24,14 +24,12 @@
 
     <?php
     // file_exists($filename): Checks if a file or directory exists.
-    $fileExists = file_exists("image");
+    $fileExists = file_exists("images");
     if (!$fileExists) {
         // mkdir($dirname): Creates a directory.
-        $directoryCreated = mkdir("image");
+        $directoryCreated = mkdir("images");
         echo ($directoryCreated ? "Folder exists" : "Failed to create folder") . "<br>";
     }
     ?>
-
 </body>
-
 </html>
