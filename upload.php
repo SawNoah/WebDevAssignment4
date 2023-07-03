@@ -81,12 +81,12 @@ if (isset($_FILES['image'])) {
         resizeImage($target_file, $thumbnail_file, 200, 200);
 
         // Save image metadata to the database
-        $conn = mysqli_connect("localhost:8080", "root", "", "gallary");
+        $conn = mysqli_connect("localhost", "root", "", "lap3");
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
         }
 
-        $sql = "INSERT INTO image (file_name, description) VALUES ('$file_name', '$description')";
+        $sql = "INSERT INTO image_gallery (file_name, description) VALUES ('$file_name', '$description')";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
@@ -104,12 +104,12 @@ if (isset($_FILES['image'])) {
 
 <body>
     <?php
-    $conn = mysqli_connect("localhost:8080", "root", "", "gallary");
+    $conn = mysqli_connect("localhost", "root", "", "lap3");
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
     // Fetch images from the database
-    $sql = "SELECT * FROM  image";
+    $sql = "SELECT * FROM  image_gallery";
     $result = mysqli_query($conn, $sql);
 
     ?>
@@ -142,5 +142,4 @@ if (isset($_FILES['image'])) {
         </table>
     </div>
 </body>
-
 </html>
