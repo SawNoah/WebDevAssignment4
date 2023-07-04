@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: peru;
+}
+
+h2 {
+    font-weight: bolder;
+    text-align: center;
+}
+
+form {
+    margin: 20px auto;
+    text-align: center;
+    background-color: bisque;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.image-description {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+tr {
+    margin: 20px auto;
+    border-color:burlywood ;
+}
+td {
+    margin: 20px auto;
+    background-color: antiquewhite;
+}
+th {
+    margin: 20px auto;
+    background-color: burlywood;
+}
