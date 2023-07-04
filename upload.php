@@ -120,7 +120,7 @@ if (isset($_FILES['image'])) {
                 <th>Image Description</th>
                 <th>Uploaded Date</th>
                 <th>Thumbnail</th>
-                <th>Edit Image</th>
+                <th>View Image</th>
             </tr>
             <tr>
                 <?php
