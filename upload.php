@@ -142,30 +142,8 @@ if (isset($_GET["delete_id"])) {
         echo "Image not found.<br>";
     }
 }
-
-//View Image
-if (isset($_GET["image_id"])) {
-    $image_id = $_GET["image_id"];
-
-    // Retrieve the file name from the database based on the image ID
-    $sql = "SELECT file_name FROM image_gallery WHERE id = $image_id";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $file_name = $row['file_name'];
-        $image_path = "images/" . $file_name;
-
-        // Display the selected image
-        echo '<div class="gallery-item">';
-        echo '<img src="' . $image_path . '" alt="Image">';
-        echo '</div>';
-    } else {
-        echo "Image not found.<br>";
-    }
-}
-
-
 ?>
+    
 <!Doctype html>
 <html>
     <head>
