@@ -7,7 +7,8 @@ $images = scandir($images_dir);
 foreach ($images as $image) {
     if ($image != "." && $image != "..") {
         echo '<div class="gallery-item">';
-        echo '<img src="' . $images_dir . $image . '" alt="image">';
+        echo '<img src="' . $images_dir . $image . '" alt="Image">';
         echo '</div>';
     }
 }
+?>
